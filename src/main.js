@@ -16,10 +16,10 @@ module.exports = async ({ req, res, log, error }) => {
     const msg = {
       to: 'abdeallahdz2004@gmail.com',
       from: {
-        email: 'noreply@yourdomain.com', // ✅ USE YOUR VERIFIED DOMAIN
+        email: 'abdellah.becherair@gmail.com', // ✅ USE YOUR VERIFIED DOMAIN
         name: 'Your Store Name'
       },
-      replyTo: 'support@yourdomain.com', // Important for replies
+      replyTo: 'support@iamrise.net', // Important for replies
       subject: `Order Confirmation #${order.$id}`,
       
       // Plain text version (MUST HAVE for spam prevention)
@@ -37,7 +37,7 @@ module.exports = async ({ req, res, log, error }) => {
         
         ---
         This is an automated message from Your Store.
-        Contact us: support@yourdomain.com
+        Contact us: support@iamrise.net
       `,
       
       // HTML version
@@ -111,8 +111,8 @@ module.exports = async ({ req, res, log, error }) => {
               <p style="margin-bottom: 5px;">
                 <strong>Need help?</strong><br>
                 Contact our support team at 
-                <a href="mailto:support@yourdomain.com" style="color: #3498db; text-decoration: none;">
-                  support@yourdomain.com
+                <a href="mailto:support@iamrise.net" style="color: #3498db; text-decoration: none;">
+                  support@iamrise.net
                 </a>
               </p>
               <p style="font-size: 0.9em; color: #7f8c8d; margin: 0;">
@@ -128,9 +128,9 @@ module.exports = async ({ req, res, log, error }) => {
               Your Business Address, City, Country
             </p>
             <p>
-              <a href="https://yourdomain.com" style="color: #7f8c8d; text-decoration: none;">Website</a> | 
-              <a href="https://yourdomain.com/privacy" style="color: #7f8c8d; text-decoration: none;">Privacy Policy</a> | 
-              <a href="https://yourdomain.com/unsubscribe" style="color: #7f8c8d; text-decoration: none;">Unsubscribe</a>
+              <a href="https://iamrise.net" style="color: #7f8c8d; text-decoration: none;">Website</a> | 
+              <a href="https://iamrise.net/privacy" style="color: #7f8c8d; text-decoration: none;">Privacy Policy</a> | 
+              <a href="https://iamrise.net/unsubscribe" style="color: #7f8c8d; text-decoration: none;">Unsubscribe</a>
             </p>
           </div>
           
@@ -141,7 +141,7 @@ module.exports = async ({ req, res, log, error }) => {
       // IMPORTANT: Add these headers to avoid spam
       headers: {
         'X-Entity-Ref-ID': order.$id, // Unique tracking ID
-        'List-Unsubscribe': '<mailto:unsubscribe@yourdomain.com>', // Unsubscribe option
+        'List-Unsubscribe': '<mailto:unsubscribe@iamrise.net>', // Unsubscribe option
       },
       
       // SendGrid categories for analytics
@@ -168,7 +168,7 @@ module.exports = async ({ req, res, log, error }) => {
         spamCheck: {
           enable: true,
           threshold: 5, // 1-10, lower is stricter
-          postToUrl: 'https://yourdomain.com/spam-reports'
+          postToUrl: 'https://mwsool.com/spam-reports'
         }
       }
     };
