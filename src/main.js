@@ -83,7 +83,7 @@ ${process.env.CONTACT_FROM_NAME || 'iamrise'}
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-    <h1 style="color: #2c3e50; margin: 0;">${process.env.CONTACT_FROM_NAME || 'Your Company'}</h1>
+    <h1 style="color: #2c3e50; margin: 0;">${process.env.CONTACT_FROM_NAME || 'iamrise'}</h1>
     <p style="color: #7f8c8d; margin: 5px 0 0 0;">Contact Confirmation</p>
   </div>
   
@@ -104,7 +104,7 @@ ${process.env.CONTACT_FROM_NAME || 'iamrise'}
     </ul>
     
     <p>Best regards,<br>
-    <strong>${process.env.CONTACT_FROM_NAME || 'Your Company'}</strong></p>
+    <strong>${process.env.CONTACT_FROM_NAME || 'iamrise'}</strong></p>
   </div>
 </body>
 </html>
