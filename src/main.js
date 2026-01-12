@@ -3,7 +3,7 @@ const sgMail = require('@sendgrid/mail');
 module.exports = async ({ req, res, log, error }) => {
   try {
     // Log full request for debugging
-    log('=== CONTACT FORM TRIGGERED ===');
+    log('=== CONTACT FORM TRIGGERED ===', req.body.data);
     log('Request body: ' + JSON.stringify(req.body, null, 2));
 
     if (req.body.data.$collectionId !== 'contact_messages') {
