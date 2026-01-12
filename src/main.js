@@ -6,8 +6,8 @@ module.exports = async ({ req, res, log, error }) => {
     log('=== CONTACT FORM TRIGGERED ===', req.body.data);
     log('Request body: ' + JSON.stringify(req.body, null, 2));
 
-    if (req.body.data.$collectionId !== 'contact_messages') {
-      return res.json({ error: 'Invalid Contact collection' }, 400);
+    if (req.body.data) {
+      return res.json({ error: req.body.data }, 400);
     }
     // Extract contact data from Appwrite database event
     let contactData;
