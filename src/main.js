@@ -5,9 +5,10 @@ module.exports = async ({ req, res, log, error }) => {
     // Log full request for debugging
     log('=== CONTACT FORM TRIGGERED ===', req.body.data);
     log('Request body: ' + JSON.stringify(req.body, null, 2));
+    log('Request body: ' + JSON.stringify(req.body.$collectionId, null, 2));
 
-    if (req.body.data) {
-      return res.json({ error: req.body.data }, 400);
+    if (req.body.$collectionId !== 'contact_messages') {
+      return res.json({ error: "Collection ID does not match contact_messages" }, 400);
     }
     // Extract contact data from Appwrite database event
     let contactData;
